@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Posted Ideas</title>
+</head>
+<body style="background-color: chocolate;">
+    <h1>Your Posted Ideas</h1>
+    {% for idea in ideas %}
+    <div>
+        <h3>{{ idea.title }}</h3>
+        <p>{{ idea.description }}</p>
+        
+    </div>
+    {% endfor %}
+    <br>
+    <a href="{{ url_for('submit_idea') }}">Submit Another Idea</a>
+    <br>
+    <a href="{{url_for('logining')}}">logout</a>
+    
+    
+</body>
+</html>

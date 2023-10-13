@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do-You-Know</title>
+</head>
+<body style="background-color: aquamarine;">
+    <h1>Search for you topic</h1>
+    <img src="{{ url_for('static', filename='2.jpg',) }}"  alt="Image" width="400" height="400" align="right">
+
+    <form method="POST" action="/">
+        <input type="text" name="search_query" placeholder="Search for topic">
+        <button type="submit">Search</button>
+    </form>
+    
+    <h2>Your Topic Is Here:</h2>
+    <ul>
+        {% for topic in topics %}
+        <li><a href="{{ topic.link }}">{{ topic.topic1 }}</a></li>
+        {% endfor %}
+    </ul>
+    <b>Do You Want to submit an Idea</b><br/>
+    <a  href="{{url_for('logining')}}">login</a>
+    <p>Dont have an account?</p>
+    <a  href="{{url_for('loger5')}}">singup</a>
+    <br/>
+    <br/>
+    
+</body>
+</html>
