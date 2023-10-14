@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do-You-Know</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body style="background-color: aquamarine;">
+<body style="background-color: aquamarine; text-align: center;margin-top: 10px;">
     <h1>Search for you topic</h1>
-    <img src="{{ url_for('static', filename='2.jpg',) }}"  alt="Image" width="400" height="400" align="right">
+    <img src="{{ url_for('static', filename='2.jpg',) }}"  alt="Image" width="50%">
 
     <form method="POST" action="/">
         <input type="text" name="search_query" placeholder="Search for topic">
@@ -20,10 +21,14 @@
         <li><a href="{{ topic.link }}">{{ topic.topic1 }}</a></li>
         {% endfor %}
     </ul>
-    <b>Do You Want to submit an Idea</b><br/>
+    <b>Do You Want to submit an Idea</b><br/><br/>
+    <div class="bu">
     <a  href="{{url_for('logining')}}">login</a>
+</div>
     <p>Dont have an account?</p>
+    <div class="bu">
     <a  href="{{url_for('loger5')}}">singup</a>
+    </div>
     <br/>
     <br/>
     

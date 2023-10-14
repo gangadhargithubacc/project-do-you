@@ -1,12 +1,15 @@
 
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
     <title>Your Posted Ideas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body style="background-color: chocolate;">
-    <h1>Your Posted Ideas</h1>
+<body style="background-color: blanchedalmond;text-align: center;">
+    <h1  style="color:red">Your Posted Ideas</h1>
     {% for idea in ideas %}
     <div>
         <h3>{{ idea.title }}</h3>
@@ -14,10 +17,18 @@
         
     </div>
     {% endfor %}
-    <br>
+    <br/>
+    <div class="bu" >
     <a href="{{ url_for('submit_idea') }}">Submit Another Idea</a>
-    <br>
+    </div>
+    <br/>
+    <div class="bu">
+    <a href="{{url_for('loger4')}}">search for a topic</a>
+    </div>
+    <br/>
+    <div class="bu">
     <a href="{{url_for('logining')}}">logout</a>
+    </div>
     
     
 </body>
