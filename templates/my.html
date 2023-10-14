@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,29 +7,31 @@
     <title>Submit Idea</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body style="background-color: aqua;text-align: center;">
+<body style="background-color: aqua;text-align: center;padding-left: 80px;">
+    <div style="width: 90%;background-color: lightblue;"> 
     <h1>Submit Your Idea</h1>
     <form action="/submit_idea" method="post" enctype="multipart/form-data">
         <label for="idea_title">Title:</label>
-        <input type="text" name="idea_title" id="idea_title" required><br>
+        <input type="text" name="idea_title" id="idea_title" required><br><br><br>
 
-        <label for="idea_description">Description:</label><br/>
-        <textarea name="idea_description" id="idea_description" required></textarea><br>
+        <label for="idea_description">Description:</label><br>
+        <textarea name="idea_description" id="idea_description" required></textarea><br><br>
 
         <label for="idea_file">Attach File:</label>
-        <input type="file" name="idea_file" id="idea_file" required><br>
-
+        <input type="file" name="idea_file" id="idea_file" required><br><br>
+         <div class="bu">
         <input type="submit" value="Submit Idea">
+         </div>
     </form>
-<br/>
+<br>
 <div class="bu">
 <a href="{{url_for('loger4')}}">search for a topic</a>
-</div> <br/>
+</div> <br>
 <div class="bu">
 <a href="{{url_for('view_ideas')}}">view your ideas</a>
 </div>
-<br/>
- 
+<br>
+ </div>
 
     
 </body>

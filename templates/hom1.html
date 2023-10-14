@@ -6,12 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Welcome to iCoder. A blog for coding enthusiasts">
-
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <title>"Do you know? My Idea!"</title>
+  
 </head>
 
 <body>
@@ -143,7 +144,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{{ url_for('static', filename='1.jpg',) }}"  alt="Image"  class="d-block w-100">   
+        <img src="{{ url_for('static', filename='1.jpg',) }}"  width="40%" alt="Image"  class="d-block w-100">   
         <div class="carousel-caption d-none d-md-block">
           <h2>Welcome to Idea Blog</h2>
           <p>Social, Business and Technology</p>
@@ -153,7 +154,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{ url_for('static', filename='2.jpg',) }}"  alt="Image"  class="d-block w-100">
+        <img src="{{ url_for('static', filename='2.jpg',) }}" width="40%"  alt="Image"  class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
           <h2>Idea Sharing Blog</h2>
           <p>Social, Business and Technology</p>
@@ -163,7 +164,7 @@
         </div>
       </div>
       <div class="carousel-item">
-      <img src="{{ url_for('static', filename='3.jpg',) }}"  alt="Image"  class="d-block w-100">
+      <img src="{{ url_for('static', filename='3.jpg',) }}" width="40%" alt="Image"  class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
           <h2>Thinking Out Box</h2>
           <p>Social, Business and Technology</p>
@@ -185,11 +186,16 @@
   <h1>It's you to start with "Do You Know? My Idea...."</h1>
   <h2>Login To Propose, Connect and Explore</h2>
   <p>It's your space to make and showcase your creative ideas.</p>
-  <h3>Post an idea</h3>
-  <a href="{{url_for('submit_idea')}}">click Here!</a>
-  <h3> Searching</h3>
-  <a href="{{url_for('loger4')}}">click Here!</a>
-  
+  <div style="background-color: beige;">
+  <h3 style="padding-left: 60px;color: lightcoral;">Post an idea</h3>
+  <div class="bu">
+  <a href="{{url_for('submit_idea')}}">Post Here!</a>
+  </div>
+  <h3 style="padding-left: 60px;color: darkorchid;"> Searching</h3>
+  <div class="bu">
+  <a href="{{url_for('loger4')}}">Search Here!</a>
+  </div>
+  </div>
   <footer class="container">
     <p class="float-right"><a href="#">Back to top</a></p>
     <p>© 2023-2024 Idea Blog, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>

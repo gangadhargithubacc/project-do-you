@@ -11,21 +11,21 @@
 <body style="background-color: blanchedalmond;text-align: center;">
     <h1  style="color:red">Your Posted Ideas</h1>
     {% for idea in ideas %}
-    <div>
+    <div style="width: 25%;padding-right: 0%;background-color: rgb(153, 130, 238);margin-left: 40%;">
         <h3>{{ idea.title }}</h3>
         <p>{{ idea.description }}</p>
         
     </div>
     {% endfor %}
-    <br/>
+    <br>
     <div class="bu" >
     <a href="{{ url_for('submit_idea') }}">Submit Another Idea</a>
     </div>
-    <br/>
+    <br>
     <div class="bu">
     <a href="{{url_for('loger4')}}">search for a topic</a>
     </div>
-    <br/>
+    <br>
     <div class="bu">
     <a href="{{url_for('logining')}}">logout</a>
     </div>

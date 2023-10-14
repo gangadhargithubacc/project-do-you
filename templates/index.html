@@ -6,7 +6,7 @@
     <title>Do-You-Know</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body style="background-color: aquamarine; text-align: center;margin-top: 10px;">
+<body style="background-color:powderblue; text-align: center;margin-top: 10px;">
     <h1>Search for you topic</h1>
     <img src="{{ url_for('static', filename='2.jpg',) }}"  alt="Image" width="50%">
 
@@ -21,7 +21,7 @@
         <li><a href="{{ topic.link }}">{{ topic.topic1 }}</a></li>
         {% endfor %}
     </ul>
-    <b>Do You Want to submit an Idea</b><br/><br/>
+    <b>Do You Want to submit an Idea</b><br><br>
     <div class="bu">
     <a  href="{{url_for('logining')}}">login</a>
 </div>
@@ -29,8 +29,8 @@
     <div class="bu">
     <a  href="{{url_for('loger5')}}">singup</a>
     </div>
-    <br/>
-    <br/>
+    <br>
+    <br>
     
 </body>
 </html>
